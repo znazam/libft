@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:29:21 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/21 14:57:10 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/21 12:20:41 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/21 14:56:18 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int	ft_toupper(int c)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }

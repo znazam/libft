@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:52:38 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/20 16:02:21 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/21 15:05:26 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int n)
 {
-	int n;
-
 	while(n >= '0' && <= '9')
-	   ft_puthchar("%n")
-}	   
+	   ft_puthchar("%n");
+}
+
+int	main()
+{
+	ft_putnbr('1')
+
