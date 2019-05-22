@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:20:41 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:27:29 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/22 13:07:02 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/22 14:26:15 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_toupper(int c)
+char	*ft_strncpy(char *dst, char *src, size_t len)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
+	int i;
+
+	i = 0;
+	while (src[i] != '\0' && i <= len)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

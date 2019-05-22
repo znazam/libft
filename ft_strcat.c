@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:20:41 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:27:29 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/22 13:15:20 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/22 14:23:57 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strcat(char *dest, const char *src)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
+	int i;
+	int n;
+
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[n] != '\0')
+	{
+		dest[i+n] = src[n]
+			n++;
+	}
+	dest[i+n] = '\0';
+	return (dest);
 }
