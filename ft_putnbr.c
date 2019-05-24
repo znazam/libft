@@ -6,12 +6,22 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:52:38 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:21:14 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/23 16:09:17 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
+void	ft_putnbr(int n)
 {
-
+	if (n < 0)
+	{
+		n *= -1;
+		ft_putchar('-');
+	}
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+	}
+	ft_putchar(n % 10 + 48);
+}
