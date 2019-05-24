@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:33:22 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/23 15:59:13 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/24 11:06:08 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if(s[i] == (char)c)
-			return((char *)&s[i]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i++;
 	}
 	return (NULL);
