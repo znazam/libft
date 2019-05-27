@@ -6,16 +6,11 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:48:50 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:17:43 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:57:18 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
-}
 
 int		ft_atoi(const char *str)
 {

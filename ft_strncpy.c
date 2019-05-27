@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:07:02 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:26:15 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:38:30 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strncpy(char *dst, char *src, size_t len)
 	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i <= len)
+	while (src[i] != '\0' && len > 0)
 	{
 		dst[i] = src[i];
 		i++;
