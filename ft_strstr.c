@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 14:54:43 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/24 15:33:52 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/28 11:13:46 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,4 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		i++;
 	}
 	return (NULL);
-}
-
-#include <stdio.h>
-
-int		main()
-{
-	char haystack[] = "HelloZ Zaid Nazam";
-	char needle[] = "Zaid";
-	printf("%s", ft_strstr(haystack, needle));
-	return (0);
 }
