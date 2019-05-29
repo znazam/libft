@@ -5,13 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 15:08:18 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/28 16:07:22 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/29 08:44:00 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/29 08:54:38 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
+	size_t i;
+	size_t len;
+	size_t k;
+
+	i = 0;
+	len = ft_strlen((const char *)dst);
+	k = len;
+	if (len > n)
+		k = n;
+	k += ft_strlen(src);
+	while (src[i] != '\0' && i + len < n - 1 && n > 0)
+	{
+		dst[i + len] = src[i];
+		i++;
+	}
+	dst[i + len] = '\0';
+	return (k);
+}
 
