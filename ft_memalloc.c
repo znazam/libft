@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 11:22:37 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/30 09:08:24 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/30 14:03:04 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/30 14:06:52 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memalloc(size_t n)
 {
-	unsigned char	*t1;
-	unsigned char	*t2;
-	size_t			i;
-	int				diff;
+	int		*new;
+	size_t	i;
 
-	t1 = (unsigned char *)s1;
-	t2 = (unsigned char *)s2;
 	i = 0;
-	diff = 0;
-	while (diff == 0 && i < n)
-	{
-		diff = t1[i] - t2[i];
-		i++;
-	}
-	return (diff);
+	if (!(new = malloc(n)))
+		return (NULL);
+	ft_bzero(new, n);
+	return (new);
 }
