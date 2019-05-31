@@ -6,8 +6,18 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:29:38 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/31 13:05:47 by znazam           ###   ########.fr       */
+/*   Updated: 2019/05/31 13:10:42 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_memdel(void **ap)
+{
+	if (ap != NULL)
+	{
+		free(*ap);
+		*ap = NULL;
+		ap = NULL;
+	}
+}

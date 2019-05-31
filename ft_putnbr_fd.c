@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:29:21 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/31 13:17:58 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/31 15:44:06 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/31 15:44:22 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t i;
+	char	v[10];
+	long	nb;
+	int		i;
 
-	i = 0;
-	while (s[i] != '\0')
+	nb = n;
+	if (nb < 0)
 	{
-		ft_putchar(s[i]);
+		ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if (nb == 0)
+		ft_putchar_fd('0', fd);
+	i = 0;
+	while (nb > 0)
+	{
+		v[i] = nb % 10 + '0';
+		nb = nb / 10;
 		i++;
+	}
+	i--;
+	while (i >= 0)
+	{
+		ft_putchar_fd(v[i], fd);
+		i--;
 	}
 }

@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:29:21 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/31 13:17:58 by znazam           ###   ########.fr       */
+/*   Created: 2019/05/31 13:55:09 by znazam            #+#    #+#             */
+/*   Updated: 2019/05/31 16:09:34 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*ft_strtrim(char const *s)
 {
-	size_t i;
+	int		i;
+	int		j;
+	int		k;
+	char	*dst;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		ft_putchar(s[i]);
-		i++;
+		i = 0;
+		j = ft_strlen((char *)(s)) - 1;
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+			i++;
+		if (!(dst = (char*)malloc(sizeof(*dst) * (j - i + 1))))
+			return (NULL);
+		while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+			j--;
+		k = 0;
+		while (i <= j)
+		{
+			dst[k++] = s[i];
+			i++;
+		}
+		dst[k] = '\0';
+		return (dst);
 	}
+	return (NULL);
 }
