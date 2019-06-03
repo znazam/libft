@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:35:49 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/28 11:07:43 by znazam           ###   ########.fr       */
+/*   Updated: 2019/06/03 12:22:47 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char *t;
-	int i;
+	const char	*t;
+	int			i;
 
 	i = 0;
 	t = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			t = s + i;

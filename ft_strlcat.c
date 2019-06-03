@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 08:44:00 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/29 08:54:38 by znazam           ###   ########.fr       */
+/*   Updated: 2019/06/03 12:28:03 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	dst[i + len] = '\0';
 	return (k);
 }
-
