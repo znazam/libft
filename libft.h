@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/31 15:57:19 by znazam           ###   ########.fr       */
+/*   Updated: 2019/06/12 10:27:17 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(char c);
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *s);
@@ -65,10 +66,10 @@ char	*ft_strtrim(char const *s);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strncpy(char *dst, char *src, size_t len);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
-char	*ft_strncpy(char *dst, char *src, size_t len);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
