@@ -6,14 +6,14 @@
 #    By: znazam <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:46:12 by znazam            #+#    #+#              #
-#    Updated: 2019/06/12 10:28:12 by znazam           ###   ########.fr        #
+#    Updated: 2019/06/17 11:28:33 by znazam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = libft.a
 
-SRC = ft_putchar.c ft_strdel.c ft_strnequ.c \ft_putchar_fd.c ft_strdup.c\
+SRC = ft_putchar.c ft_strdel.c ft_strnequ.c ft_putchar_fd.c ft_strdup.c\
 	  ft_strnew.c ft_putendl.c ft_strequ.c ft_strnstr.c ft_atoi.c\
 	  ft_putendl_fd.c ft_striter.c ft_strrchr.c ft_bzero.c ft_putnbr.c \
 	  ft_striteri.c ft_strsplit.c ft_isalnum.c ft_memalloc.c ft_putnbr_fd.c	\
@@ -40,6 +40,7 @@ OBJ = ft_memcmp.o ft_putendl.o ft_strchr.o ft_striter.o ft_strncat.o\
 INCL = libft.h
 
 all: $(NAME)
+
 
 $(NAME):
 	gcc -c -Wall -Werror -Wextra $(SRC)

@@ -6,7 +6,7 @@
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/06/13 11:35:47 by znazam           ###   ########.fr       */
+/*   Updated: 2019/06/19 09:12:27 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <ctype.h>
+# include <stdio.h>
 
-int		atoi(const char *str);
+int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
