@@ -6,7 +6,7 @@
 #    By: znazam <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:46:12 by znazam            #+#    #+#              #
-#    Updated: 2019/06/17 11:28:33 by znazam           ###   ########.fr        #
+#    Updated: 2019/06/21 11:54:37 by znazam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = ft_putchar.c ft_strdel.c ft_strnequ.c ft_putchar_fd.c ft_strdup.c\
 	  ft_strmap.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strmapi.c \
 	  ft_tolower.c ft_memdel.c ft_strclr.c ft_strncat.c ft_toupper.c ft_itoa.c\
 	  ft_memmove.c ft_strcmp.c ft_strncmp.c ft_memset.c ft_strcpy.c\
-	  ft_strncpy.c ft_isspace.c\
+	  ft_strncpy.c ft_isspace.c ft_repchr.c\
 
 OBJ = ft_memcmp.o ft_putendl.o ft_strchr.o ft_striter.o ft_strncat.o\
   	  ft_strsplit.o ft_isdigit.o ft_memcpy.o ft_putendl_fd.o ft_strclr.o\
@@ -35,7 +35,7 @@ OBJ = ft_memcmp.o ft_putendl.o ft_strchr.o ft_striter.o ft_strncat.o\
 	  ft_isalnum.o ft_memccpy.o ft_putchar.o ft_putstr_fd.o ft_strdup.o\
 	  ft_strmap.o ft_strnstr.o ft_toupper.o ft_isalpha.o ft_memchr.o\
 	  ft_putchar_fd.o ft_strcat.o ft_strequ.o ft_strmapi.o ft_strrchr.o\
-	  ft_isascii.o ft_isspace.o\
+	  ft_isascii.o ft_isspace.o ft_repchr.o\
 
 INCL = libft.h
 
