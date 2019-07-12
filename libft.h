@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/06/21 12:56:13 by znazam           ###   ########.fr       */
+/*   Updated: 2019/07/12 11:45:38 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@
 # include <string.h>
 # include <stdio.h>
 
+typedef struct s_list
+{
+	void	*content;
+	size_t	content_size;
+	struct	s_list *next;
+	struct	s_list *previous;
+}				t_list;
+
+void		ft_listdel(t_list **head, void (*f)(void *content));
+void		ft_listadd(t_list **head, t_list *link);
+t_list		*ft_lstnew(void const *content, size_t content_size);
 int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
 int			ft_isalnum(int c);
