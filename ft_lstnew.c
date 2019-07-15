@@ -6,7 +6,7 @@
 /*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 09:28:16 by znazam            #+#    #+#             */
-/*   Updated: 2019/07/15 08:29:25 by znazam           ###   ########.fr       */
+/*   Updated: 2019/07/15 09:10:48 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_list      *ft_lstnew(void const *content, size_t content_size)
         head->content_size = 0;
     }
     head->next = NULL;
+    head->previous = NULL;
     return(head);
 
 }
