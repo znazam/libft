@@ -6,7 +6,7 @@
 /*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/07/12 11:45:38 by znazam           ###   ########.fr       */
+/*   Updated: 2019/07/12 15:11:23 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef struct s_list
 	struct	s_list *previous;
 }				t_list;
 
-void		ft_listdel(t_list **head, void (*f)(void *content));
-void		ft_listadd(t_list **head, t_list *link);
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);
 t_list		*ft_lstnew(void const *content, size_t content_size);
 int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
