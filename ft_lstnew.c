@@ -6,7 +6,7 @@
 /*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 09:28:16 by znazam            #+#    #+#             */
-/*   Updated: 2019/07/15 09:10:48 by znazam           ###   ########.fr       */
+/*   Updated: 2019/07/15 09:33:44 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list      *ft_lstnew(void const *content, size_t content_size)
 {
    t_list *head;
 
+    if (!(head = ft_memalloc(sizeof(t_list))))
+        return (NULL);
     if (!(head->content = ft_memalloc(content_size)))
         return (NULL); 
     ft_memcpy(head->content, content, content_size);
