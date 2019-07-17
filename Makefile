@@ -6,7 +6,7 @@
 #    By: znazam <znazam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:46:12 by znazam            #+#    #+#              #
-#    Updated: 2019/07/15 09:25:30 by znazam           ###   ########.fr        #
+#    Updated: 2019/07/17 11:36:26 by znazam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,10 +32,12 @@ INCL = libft.h
 all: $(NAME)
 
 
-$(NAME):
-	gcc -c -Wall -Werror -Wextra $(SRC)
+$(NAME): $(OBJ)
 	ar rv $(NAME) $(OBJ) $(INCL)
 	ranlib $(NAME)
+
+%.o: %.c
+	gcc -c -Wall -Werror -Wextra $< -o $@
 
 clean:
 	rm -f $(OBJ)
