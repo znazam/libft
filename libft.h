@@ -6,7 +6,7 @@
 /*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/07/22 08:12:50 by znazam           ###   ########.fr       */
+/*   Updated: 2019/08/06 08:20:31 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,8 @@ size_t		ft_strlcat(char *dst, const char *src, size_t n);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+char		*ft_strndup(const char *start, size_t length);
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_swapnfree(void **var, void *new_val);
 
 #endif

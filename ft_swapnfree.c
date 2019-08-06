@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_swapnfree.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/06 08:28:25 by znazam            #+#    #+#             */
-/*   Updated: 2019/08/06 08:28:26 by znazam           ###   ########.fr       */
+/*   Created: 2019/08/06 08:28:52 by znazam            #+#    #+#             */
+/*   Updated: 2019/08/06 08:28:53 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_swapnfree(void **var, void *new_val)
 {
-	while (len--)
-		((unsigned char *)b)[len] = (unsigned char)c;
-	return (b);
+	void	*temp;
+
+	temp = new_val;
+	free(*var);
+	*var = temp;
 }

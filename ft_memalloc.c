@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 14:03:04 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/30 14:06:52 by znazam           ###   ########.fr       */
+/*   Created: 2019/08/06 08:26:00 by znazam            #+#    #+#             */
+/*   Updated: 2019/08/06 08:26:01 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t n)
+void	*ft_memalloc(size_t size)
 {
-	int		*new;
-	size_t	i;
+	void	*result;
 
-	i = 0;
-	if (!(new = malloc(n)))
+	result = malloc(size);
+	if (!result)
 		return (NULL);
-	ft_bzero(new, n);
-	return (new);
+	ft_bzero(result, size);
+	return (result);
 }
