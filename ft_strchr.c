@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 14:33:22 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/28 10:28:25 by znazam           ###   ########.fr       */
+/*   Created: 2019/08/06 09:01:02 by znazam            #+#    #+#             */
+/*   Updated: 2019/08/06 09:01:03 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-
-	i = 0;
-	while (i < ft_strlen(s) + 1)
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
 }

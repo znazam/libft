@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 13:52:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/31 13:54:24 by znazam           ###   ########.fr       */
+/*   Created: 2019/08/06 09:00:48 by znazam            #+#    #+#             */
+/*   Updated: 2019/08/06 09:00:50 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
-	int		len;
+	char *result;
+	char *iter;
+	char *c1;
+	char *c2;
 
-	if (s1 == NULL || s2 == NULL)
+	c1 = (char *)s1;
+	c2 = (char *)s2;
+	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(new = ft_strnew(len + 1)))
+	result = malloc(sizeof(char) + (ft_strlen(s1) + ft_strlen(s2) + 1));
+	iter = result;
+	if (!result)
 		return (NULL);
-	ft_strcat(new, s1);
-	ft_strcat(new, s2);
-	return (new);
+	while (*c1)
+		*(iter++) = *(c1++);
+	while (*c2)
+		*(iter++) = *(c2++);
+	*iter = 0;
+	return (result);
 }

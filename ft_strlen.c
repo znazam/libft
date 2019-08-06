@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znazam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:47:42 by znazam            #+#    #+#             */
-/*   Updated: 2019/05/22 14:25:47 by znazam           ###   ########.fr       */
+/*   Created: 2019/08/06 09:01:16 by znazam            #+#    #+#             */
+/*   Updated: 2019/08/06 09:01:18 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	int len;
+	char	*c;
 
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
+	c = (char *)s;
+	while (*c)
+		c++;
+	return (c - s);
 }
