@@ -6,7 +6,7 @@
 /*   By: znazam <znazam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:28:56 by znazam            #+#    #+#             */
-/*   Updated: 2019/08/06 08:20:31 by znazam           ###   ########.fr       */
+/*   Updated: 2019/08/06 08:48:01 by znazam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdio.h>
+
+# define CHECK_RETURN(c, r) if(c) return (r);
 
 typedef struct s_list
 {
