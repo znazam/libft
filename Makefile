@@ -6,7 +6,7 @@
 #    By: znazam <znazam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:46:12 by znazam            #+#    #+#              #
-#    Updated: 2019/08/06 08:20:44 by znazam           ###   ########.fr        #
+#    Updated: 2019/08/27 15:29:52 by znazam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,16 +34,19 @@ all: $(NAME)
 
 
 $(NAME): $(OBJ)
-	ar rv $(NAME) $(OBJ) $(INCL)
-	ranlib $(NAME)
+	@ar rv $(NAME) $(OBJ) $(INCL)
+	@ranlib $(NAME)
+	@echo "\033[94mLibft Library Compiled."
 
 %.o: %.c
-	gcc -c -Wall -Werror -Wextra $< -o $@
+	@gcc -c -Wall -Werror -Wextra $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@echo "\033[94mLibft Library Object Files Removed."
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "\033[94mLibft Library File Removed."
 
 re: fclean all
